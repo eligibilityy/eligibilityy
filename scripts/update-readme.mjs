@@ -1,6 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const { LASTFM_API_KEY, LASTFM_USER } = process.env;
+const {
+  LASTFM_API_KEY,
+  LASTFM_USER,
+  SPOTIFY_CLIENT_ID,
+  SPOTIFY_CLIENT_SECRET,
+} = process.env;
 
 const README = "README.md";
 const LIMIT = 5;
@@ -65,7 +70,7 @@ function renderRow(track) {
   const live = track["@attr"]?.nowplaying === "true";
   const art = track.image?.find((img) => img.size === "large")?.["#text"];
   const hasArt = art && !art.includes(PLACEHOLDER_ART);
-  const link = escapeHtml(track.url);
+  const link = escapeHtml(track.spotifyUrl ?? track.url);
 
   const cover = hasArt
     ? `<a href="${link}"><img src="${escapeHtml(art)}" width="48" height="48" alt=""></a>`
@@ -88,9 +93,62 @@ function renderRow(track) {
 function renderBlock(tracks) {
   if (tracks.length === 0) return "_Nothing playing right now._";
 
+  const header = `<h3>Listening History</h3>`;
   const footer = `<sub><a href="https://www.last.fm/user/${encodeURIComponent(LASTFM_USER)}">View full history on Last.fm →</a></sub>`;
 
-  return `<table>\n${tracks.slice(0, LIMIT).map(renderRow).join("\n")}\n</table>\n\n${footer}`;
+  return `${header}\n<table>\n${tracks.slice(0, LIMIT).map(renderRow).join("\n")}\n</table>\n\n${footer}`;
+}
+
+async function getSpotifyToken() {
+  if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET) return null;
+  try {
+    const res = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Basic " +
+          Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString(
+            "base64",
+          ),
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "grant_type=client_credentials",
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return (await res.json()).access_token;
+  } catch (err) {
+    console.warn(
+      `Spotify auth failed, falling back to search links: ${err.message}`,
+    );
+    return null;
+  }
+}
+
+async function findSpotifyUrl(track, token) {
+  const name = (track.name ?? "").replace(/"/g, "");
+  const artist = (track.artist?.["#text"] ?? "").replace(/"/g, "");
+  const searchLink = `https://open.spotify.com/search/${encodeURIComponent(`${name} ${artist}`)}`;
+  if (!token) return searchLink;
+
+  try {
+    const url = new URL("https://api.spotify.com/v1/search");
+    url.search = new URLSearchParams({
+      q: `track:"${name}" artist:"${artist}"`,
+      type: "track",
+      limit: "1",
+    });
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${token}` },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const id = (await res.json()).tracks?.items?.[0]?.id;
+    return id ? `https://open.spotify.com/track/${id}` : searchLink;
+  } catch (err) {
+    console.warn(`Spotify lookup failed for "${name}": ${err.message}`);
+    return searchLink;
+  }
 }
 
 async function main() {
@@ -99,6 +157,8 @@ async function main() {
   }
 
   const tracks = await fetchRecentTracks();
+  const token = await getSpotifyToken();
+  for (const t of tracks) t.spotifyUrl = await findSpotifyUrl(t, token);
   const readme = await readFile(README, "utf8");
 
   const start = readme.indexOf(START);
