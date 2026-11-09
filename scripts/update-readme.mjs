@@ -19,7 +19,7 @@ const esc = (s) => s.replace(/([\\`*_{}\[\]()#+!|<>])/g, "\\$1");
 
 const lines = recenttracks.track.slice(0, 5).map((t) => {
   const live = t["@attr"]?.nowplaying === "true";
-  return `- ${live ? "🎧 Now playing: " : ""}[${esc(t.name)}](${t.url}) — ${esc(t.artist["#text"])}`;
+  return `- ${live ? "Now playing: " : ""}[${esc(t.name)}](${t.url}) — ${esc(t.artist["#text"])}`;
 });
 
 const readme = await readFile("README.md", "utf8");
