@@ -4,24 +4,24 @@
 <h3>Listening History</h3>
 <table>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/16yVaWo0Gmvs2wlnmJbcH7"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/740cb2a72c4fd784d09417bdcb77db49.gif" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/16yVaWo0Gmvs2wlnmJbcH7"><b>CALL BACK</b></a><br>Don Toliver<br><sub>♪ Now playing</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/7tzeZLMnqlke2raEMeDZ9S"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/e36a3e1f4d128630bc66d4d7957b50a9.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/7tzeZLMnqlke2raEMeDZ9S"><b>These Four Walls</b></a><br>Khamari<br><sub>♪ Now playing</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/7JKwHEhYWjEDiaAVqm0RZd"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/193b137e013f1b44883ccc58222d68bd.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/7JKwHEhYWjEDiaAVqm0RZd"><b>Never Last</b></a><br>Lil Tecca<br><sub><!--t-->2 minutes ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/3LBM25IgxI9y549SiYxtSi"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/28521c4e3e9b3d39e52fe96dfb795bb1.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/3LBM25IgxI9y549SiYxtSi"><b>Stuck on You</b></a><br>Givēon<br><sub><!--t-->3 minutes ago<!--/t--></sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/1mQi6sctbrJZfQkA3fOH8M"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/6ee5936b857f66ac31be6082eb66e5a5.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/1mQi6sctbrJZfQkA3fOH8M"><b>Intimate</b></a><br>Crystal Castles<br><sub><!--t-->5 minutes ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/2c2tlXfEmLgUNvxngIi1qL"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/74c7c0622904c1fdf629bc307952ccc4.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/2c2tlXfEmLgUNvxngIi1qL"><b>Dead Man Walking</b></a><br>Brent Faiyaz<br><sub><!--t-->6 minutes ago<!--/t--></sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/5oady7OSE7dH7LHiqmb3Cr"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/f3e7672d244f71da1d3ed92879c189db.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/5oady7OSE7dH7LHiqmb3Cr"><b>Dreams, Fairytales, Fantasies (feat. Brent Faiyaz &amp; Salaam Remi)</b></a><br>A$AP Ferg<br><sub><!--t-->22 hours ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/4XJRpBOG0bU3Nxnvam3FnC"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/4f8401c7eae61f7df866141bf910b648.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/4XJRpBOG0bU3Nxnvam3FnC"><b>LOVE YOU BETTER</b></a><br>Future<br><sub><!--t-->8 minutes ago<!--/t--></sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/d262f4c26af1eff4f8a13da62eb5d8b9.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"><b>Janice STFU</b></a><br>Drake<br><sub><!--t-->22 hours ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/2CInzVilMduj9L8dDXwyUA"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/9b4b858813ce5ecddec03aa860bacb1d.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/2CInzVilMduj9L8dDXwyUA"><b>Make Luv</b></a><br>Brent Faiyaz<br><sub><!--t-->11 minutes ago<!--/t--></sub></td>
   </tr>
 </table>
 
