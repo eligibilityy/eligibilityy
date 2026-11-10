@@ -1,7 +1,7 @@
 name: Update Last.fm
 on:
   schedule:
-    - cron: "*/30 * * * *"
+  - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
 permissions:
