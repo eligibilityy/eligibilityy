@@ -4,24 +4,24 @@
 <h3>Listening History</h3>
 <table>
   <tr>
-    <td width="64" align="center">♬</td>
-    <td><a href="https://open.spotify.com/track/6u3VOI9SnAxAGWSjy126YJ"><b>Waves</b></a><br>Dentist<br><sub><!--t-->5 hours ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/4zRv1Uqg1tWjLToH9plTtX"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/9b98b5a79eb31e00c3759160dd45354e.png" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/4zRv1Uqg1tWjLToH9plTtX"><b>TRUST</b></a><br>Camie<br><sub>♪ Now playing</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/2MymczAULhpJYbgyXwwiyw"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/0a041d5a35be234dcd204f3124541850.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/2MymczAULhpJYbgyXwwiyw"><b>Too Much For Me</b></a><br>selker<br><sub><!--t-->5 hours ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/4zRv1Uqg1tWjLToH9plTtX"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/9b98b5a79eb31e00c3759160dd45354e.png" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/4zRv1Uqg1tWjLToH9plTtX"><b>TRUST</b></a><br>Camie<br><sub><!--t-->2 minutes ago<!--/t--></sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/0JXXNGljqupsJaZsgSbMZV"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/d9ffbbdd038682fc20a1f640b2eaacc5.png" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/0JXXNGljqupsJaZsgSbMZV"><b>Sure Thing</b></a><br>Miguel<br><sub><!--t-->2 days ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/7f8c8743d88c625ab7e623a0c374cbf4.png" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET"><b>Linger - Remastered 2026</b></a><br>The Cranberries<br><sub><!--t-->8 minutes ago<!--/t--></sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/5tqZJUHEuqdN12RZVq2l9p"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/66f74a0568033805ea9ea91eca771726.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/5tqZJUHEuqdN12RZVq2l9p"><b>Hold On</b></a><br>The Internet<br><sub><!--t-->2 days ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/6koKhrBBcExADvWuOgceNZ"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/b2cfb5bdf137f4d6293565205965750f.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/6koKhrBBcExADvWuOgceNZ"><b>Open Arms (feat. Travis Scott)</b></a><br>SZA<br><sub><!--t-->12 minutes ago<!--/t--></sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/736PP5LTtREkDgktNmX3Gu"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/19102a409a0fbcb571788e0c4b9067b1.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/736PP5LTtREkDgktNmX3Gu"><b>Superpowers</b></a><br>Daniel Caesar<br><sub><!--t-->2 days ago<!--/t--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/47s5hKfwGXliAAB8wKMiNo"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/6b7982002379b61c62c04f3ec2190127.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/47s5hKfwGXliAAB8wKMiNo"><b>When I'm in Your Arms</b></a><br>Cleo Sol<br><sub><!--t-->18 minutes ago<!--/t--></sub></td>
   </tr>
 </table>
 
