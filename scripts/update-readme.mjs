@@ -46,7 +46,7 @@ async function fetchRecentTracks(attempts = 3) {
     user: LASTFM_USER,
     api_key: LASTFM_API_KEY,
     format: "json",
-    limit: String(LIMIT),
+    limit: String(LIMIT + 1),
   });
 
   let lastError;
@@ -79,7 +79,7 @@ function renderRow(track) {
   const status = live
     ? "♪ Now playing"
     : track.date?.uts
-      ? `<!--t-->${timeAgo(track.date.uts)}<!--/t-->`
+      ? timeAgo(track.date.uts)
       : "";
 
   return [
@@ -96,7 +96,21 @@ function renderBlock(tracks) {
   const header = `<h3>Listening History</h3>`;
   const footer = `<sub><a href="https://www.last.fm/user/${encodeURIComponent(LASTFM_USER)}">View full history on Last.fm →</a></sub>`;
 
-  return `${header}\n<table>\n${tracks.slice(0, LIMIT).map(renderRow).join("\n")}\n</table>\n\n${footer}`;
+  return `${header}\n<table>\n${tracks.map(renderRow).join("\n")}\n</table>\n\n${footer}`;
+}
+
+function dedupeNowPlaying(tracks) {
+  const [first, second, ...rest] = tracks;
+  const sameSong = (a, b) =>
+    a.name === b.name && a.artist?.["#text"] === b.artist?.["#text"];
+  if (
+    first?.["@attr"]?.nowplaying === "true" &&
+    second &&
+    sameSong(first, second)
+  ) {
+    return [first, ...rest];
+  }
+  return tracks;
 }
 
 async function getSpotifyToken() {
@@ -156,7 +170,7 @@ async function main() {
     throw new Error("LASTFM_API_KEY and LASTFM_USER must be set");
   }
 
-  const tracks = await fetchRecentTracks();
+  const tracks = dedupeNowPlaying(await fetchRecentTracks()).slice(0, LIMIT);
   const token = await getSpotifyToken();
   for (const t of tracks) t.spotifyUrl = await findSpotifyUrl(t, token);
   const readme = await readFile(README, "utf8");
@@ -170,9 +184,8 @@ async function main() {
   const current = readme.slice(start + START.length, end);
   const next = `\n${renderBlock(tracks)}\n`;
 
-  const stripTimes = (s) => s.replace(/<!--t-->.*?<!--\/t-->/g, "").trim();
-  if (stripTimes(current) === stripTimes(next)) {
-    console.log("No track changes, leaving README alone");
+  if (current.trim() === next.trim()) {
+    console.log("No changes, leaving README alone");
     return;
   }
 
