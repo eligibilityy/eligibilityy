@@ -13,6 +13,7 @@ const START = "<!-- LASTFM:START -->";
 const END = "<!-- LASTFM:END -->";
 
 const PLACEHOLDER_ART = "2a96cbd8b46e442fc41c2b86b821562f";
+const STALE_NOW_PLAYING = 30 * 60;
 
 const escapeHtml = (s = "") =>
   String(s)
@@ -28,6 +29,7 @@ function timeAgo(uts) {
   if (seconds < 60) return "just now";
   const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
   const units = [
+    ["year", 31_536_000],
     ["month", 2_592_000],
     ["week", 604_800],
     ["day", 86_400],
@@ -77,7 +79,7 @@ function renderRow(track) {
     : "♬";
 
   const status = live
-    ? "♪ Now playing"
+    ? `♪ Now playing<!--np:${track.since}-->`
     : track.date?.uts
       ? timeAgo(track.date.uts)
       : "";
@@ -113,6 +115,37 @@ function dedupeNowPlaying(tracks) {
   return tracks;
 }
 
+const rowKey = (name, artist) => `${name}\n${artist}`;
+
+function parseRows(block) {
+  const rows = new Map();
+  const re =
+    /<a href="([^"]*)"><b>(.*?)<\/b><\/a><br>(.*?)<br><sub>(.*?)<\/sub>/g;
+  for (const [, link, name, artist, status] of block.matchAll(re)) {
+    const since = status.match(/<!--np:(\d+)-->/)?.[1];
+    rows.set(rowKey(name, artist), {
+      link,
+      since: since ? Number(since) : undefined,
+    });
+  }
+  return rows;
+}
+
+function expireNowPlaying(block) {
+  const now = Math.floor(Date.now() / 1000);
+  return block.replace(/♪ Now playing<!--np:(\d+)-->/g, (match, since) =>
+    now - Number(since) >= STALE_NOW_PLAYING ? timeAgo(since) : match,
+  );
+}
+
+const normalizeTitle = (s = "") =>
+  s
+    .toLowerCase()
+    .replace(/\s+-\s+.*$/, "")
+    .replace(/\s*[([](?:feat\.?|ft\.?|with|remaster)[^)\]]*[)\]]/g, "")
+    .replace(/"/g, "")
+    .trim();
+
 async function getSpotifyToken() {
   if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET) return null;
   try {
@@ -139,26 +172,37 @@ async function getSpotifyToken() {
   }
 }
 
-async function findSpotifyUrl(track, token) {
+async function findSpotifyUrl(track, token, previousLink) {
+  if (previousLink?.startsWith("https://open.spotify.com/track/")) {
+    return previousLink;
+  }
+
   const name = (track.name ?? "").replace(/"/g, "");
   const artist = (track.artist?.["#text"] ?? "").replace(/"/g, "");
   const searchLink = `https://open.spotify.com/search/${encodeURIComponent(`${name} ${artist}`)}`;
   if (!token) return searchLink;
 
   try {
+    const title = normalizeTitle(name);
     const url = new URL("https://api.spotify.com/v1/search");
     url.search = new URLSearchParams({
-      q: `track:"${name}" artist:"${artist}"`,
+      q: `track:"${title}" artist:"${artist}"`,
       type: "track",
-      limit: "1",
+      limit: "5",
     });
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${token}` },
       signal: AbortSignal.timeout(10_000),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const id = (await res.json()).tracks?.items?.[0]?.id;
-    return id ? `https://open.spotify.com/track/${id}` : searchLink;
+    const match = (await res.json()).tracks?.items?.find(
+      (item) =>
+        normalizeTitle(item.name) === title &&
+        item.artists?.some(
+          (a) => a.name.toLowerCase() === artist.toLowerCase(),
+        ),
+    );
+    return match ? `https://open.spotify.com/track/${match.id}` : searchLink;
   } catch (err) {
     console.warn(`Spotify lookup failed for "${name}": ${err.message}`);
     return searchLink;
@@ -170,11 +214,7 @@ async function main() {
     throw new Error("LASTFM_API_KEY and LASTFM_USER must be set");
   }
 
-  const tracks = dedupeNowPlaying(await fetchRecentTracks()).slice(0, LIMIT);
-  const token = await getSpotifyToken();
-  for (const t of tracks) t.spotifyUrl = await findSpotifyUrl(t, token);
   const readme = await readFile(README, "utf8");
-
   const start = readme.indexOf(START);
   const end = readme.indexOf(END);
   if (start === -1 || end === -1 || end < start) {
@@ -182,17 +222,42 @@ async function main() {
   }
 
   const current = readme.slice(start + START.length, end);
-  const next = `\n${renderBlock(tracks)}\n`;
+  const save = (block) =>
+    writeFile(
+      README,
+      readme.slice(0, start + START.length) + block + readme.slice(end),
+    );
 
+  let tracks;
+  try {
+    tracks = dedupeNowPlaying(await fetchRecentTracks()).slice(0, LIMIT);
+  } catch (err) {
+    const expired = expireNowPlaying(current);
+    if (expired !== current) {
+      await save(expired);
+      console.log("Cleared stale now-playing status");
+    }
+    throw err;
+  }
+
+  const previous = parseRows(current);
+  const now = Math.floor(Date.now() / 1000);
+  const token = await getSpotifyToken();
+  for (const t of tracks) {
+    const prev = previous.get(
+      rowKey(escapeHtml(t.name), escapeHtml(t.artist?.["#text"])),
+    );
+    t.spotifyUrl = await findSpotifyUrl(t, token, prev?.link);
+    if (t["@attr"]?.nowplaying === "true") t.since = prev?.since ?? now;
+  }
+
+  const next = `\n${renderBlock(tracks)}\n`;
   if (current.trim() === next.trim()) {
     console.log("No changes, leaving README alone");
     return;
   }
 
-  await writeFile(
-    README,
-    readme.slice(0, start + START.length) + next + readme.slice(end),
-  );
+  await save(next);
   console.log("README updated");
 }
 
