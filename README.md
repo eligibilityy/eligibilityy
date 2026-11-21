@@ -4,24 +4,24 @@
 <h3>Listening History</h3>
 <table>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/13toFl1UwJPsRxDiD9jgtn"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/02f18167ffe180e4a2f1c39594cfd94d.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/13toFl1UwJPsRxDiD9jgtn"><b>As</b></a><br>Stevie Wonder<br><sub>♪ Now playing<!--np:1795233889--></sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/7eEnuNVAHQXEwg18zZnmdL"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/53987e56c2fd579fa7e8822195a193a3.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/7eEnuNVAHQXEwg18zZnmdL"><b>NO TRESPASSING</b></a><br>A$AP Rocky<br><sub>7 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/80209725207cc2ae53cba2924198cd86.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><b>still love you</b></a><br>GLM-RST<br><sub>6 minutes ago</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/3sXsbaZlsTv2iJiEntsgM5"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/53987e56c2fd579fa7e8822195a193a3.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/3sXsbaZlsTv2iJiEntsgM5"><b>Playa</b></a><br>A$AP Rocky<br><sub>7 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/80209725207cc2ae53cba2924198cd86.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><b>still love you - Slowed</b></a><br>GLM-RST<br><sub>8 minutes ago</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/2xsTsnA5QOFCnFXdEHGkli"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/53987e56c2fd579fa7e8822195a193a3.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/2xsTsnA5QOFCnFXdEHGkli"><b>STAY HERE 4 LIFE (feat. Brent Faiyaz)</b></a><br>A$AP Rocky<br><sub>7 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/80209725207cc2ae53cba2924198cd86.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><b>still love you</b></a><br>GLM-RST<br><sub>11 minutes ago</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/2FycFFuNMVVYIiIqeldXF5"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/53987e56c2fd579fa7e8822195a193a3.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/2FycFFuNMVVYIiIqeldXF5"><b>STOLE YA FLOW</b></a><br>A$AP Rocky<br><sub>7 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/80209725207cc2ae53cba2924198cd86.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/0pqGjnvS5HX3PpvMaepx3Q"><b>still love you - Slowed</b></a><br>GLM-RST<br><sub>13 minutes ago</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/6uqoRmGkz2p9GDgisc9TcN"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/53987e56c2fd579fa7e8822195a193a3.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/6uqoRmGkz2p9GDgisc9TcN"><b>Interrogation (Skit)</b></a><br>A$AP Rocky<br><sub>7 hours ago</sub></td>
   </tr>
 </table>
 
