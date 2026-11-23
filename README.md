@@ -4,24 +4,24 @@
 <h3>Listening History</h3>
 <table>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/1Is8hGpkGMiePASAxBluxM"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/0f243845b408281d66470ba7bbd9d92f.png" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/1Is8hGpkGMiePASAxBluxM"><b>16</b></a><br>Baby Keem<br><sub>yesterday</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/3nQA8Wj3KmWQRKq7yu4Db3"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/73ffbaa946666dcc62e292ea7a8e627f.png" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/3nQA8Wj3KmWQRKq7yu4Db3"><b>COCONUT (feat. Eem Triplin)</b></a><br>Sailorr<br><sub>3 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/6luBKkFUt5wTwz7hpLhp12"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/242e5e9da2779f9802644a6d85a58815.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/6luBKkFUt5wTwz7hpLhp12"><b>drive ME crazy!</b></a><br>Lil Yachty<br><sub>yesterday</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/63wx9vdskaXbYxyDx4oJCZ"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/a2eb6714114d2424bd8ae419d70bf757.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/63wx9vdskaXbYxyDx4oJCZ"><b>B.S. (feat. H.E.R.)</b></a><br>Jhené Aiko<br><sub>4 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/55wlsNYqcfiQsHuX8l0jmF"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/d262f4c26af1eff4f8a13da62eb5d8b9.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/55wlsNYqcfiQsHuX8l0jmF"><b>Make Them Cry</b></a><br>Drake<br><sub>yesterday</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/1TMWcbxL5YF8rKsFHv5hAP"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/be2aca67c96a044ec6e2726d7de50d94.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/1TMWcbxL5YF8rKsFHv5hAP"><b>Rules</b></a><br>Doja Cat<br><sub>4 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/0gIUyyegjuKZenuZKCRiAL"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/aaf695fb9eaa17ec26d3228789dd5ff4.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/0gIUyyegjuKZenuZKCRiAL"><b>DIE TRYING</b></a><br>PARTYNEXTDOOR<br><sub>yesterday</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/5oady7OSE7dH7LHiqmb3Cr"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/f3e7672d244f71da1d3ed92879c189db.jpg" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/5oady7OSE7dH7LHiqmb3Cr"><b>Dreams, Fairytales, Fantasies (feat. Brent Faiyaz &amp; Salaam Remi)</b></a><br>A$AP Ferg<br><sub>4 hours ago</sub></td>
   </tr>
   <tr>
-    <td width="64" align="center"><a href="https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/d262f4c26af1eff4f8a13da62eb5d8b9.jpg" width="48" height="48" alt=""></a></td>
-    <td><a href="https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"><b>Janice STFU</b></a><br>Drake<br><sub>yesterday</sub></td>
+    <td width="64" align="center"><a href="https://open.spotify.com/track/5wG3HvLhF6Y5KTGlK0IW3J"><img src="https://lastfm-img.freetls.fastly.net/i/u/174s/1240a338ee297d49b02b8f4e608ae49c.gif" width="48" height="48" alt=""></a></td>
+    <td><a href="https://open.spotify.com/track/5wG3HvLhF6Y5KTGlK0IW3J"><b>Trance (with Travis Scott &amp; Young Thug)</b></a><br>Metro Boomin<br><sub>4 hours ago</sub></td>
   </tr>
 </table>
 
