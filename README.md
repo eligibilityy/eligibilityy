@@ -1,5 +1,7 @@
 [yiliya.studio](https://www.yiliya.studio/)
 
+Check out [Habi](https://habi.yiliya.studio), [aquarium](https://github.com/eligibilityy/aquarium), and [jukebox](https://github.com/eligibilityy/jukebox) ^^
+
 <!-- NOWPLAYING:START -->
 <h3>Listening History</h3>
 <table>
@@ -25,5 +27,6 @@
   </tr>
 </table>
 
-<sub><a href="https://www.last.fm/user/linnolmfao">View full history on Last.fm →</a></sub>
+<sub><a href="https://open.spotify.com/user/6s7egqw2p3cpjni6er2mocpsk">Check my spotify →</a></sub>
+
 <!-- NOWPLAYING:END -->
