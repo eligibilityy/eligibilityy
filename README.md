@@ -1,6 +1,6 @@
 [yiliya.studio](https://www.yiliya.studio/)
 
-<!-- LASTFM:START -->
+<!-- NOWPLAYING:START -->
 <h3>Listening History</h3>
 <table>
   <tr>
@@ -26,4 +26,4 @@
 </table>
 
 <sub><a href="https://www.last.fm/user/linnolmfao">View full history on Last.fm →</a></sub>
-<!-- LASTFM:END -->
+<!-- NOWPLAYING:END -->
